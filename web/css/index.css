@@ -1,0 +1,188 @@
+/* 字体图标声明  注意fonts文件夹的路径*/
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?jhu9x3');
+    src:  url('../fonts/icomoon.eot?jhu9x3#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?jhu9x3') format('truetype'),
+      url('../fonts/icomoon.woff?jhu9x3') format('woff'),
+      url('../fonts/icomoon.svg?jhu9x3#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  /* main盒子的制作 */
+.main {
+    padding-top: 10px;
+    /* width: 980px; */
+    height: 400px;
+}
+/* 左侧focus轮播图的制作 */
+.focus1 {
+    position:relative;
+    width: 570px;
+    height: 380px;
+    /* margin-left: 100px; */
+    margin-right: 10px;
+}
+.focus2 {
+    position:relative;
+    width: 240px;
+    height: 380px;
+    /* margin-left: 100px; */
+    margin-right: 10px;
+}
+
+/* 右侧快报的制作 */
+.newsflash {
+    width: 250px;
+    height: 454px;
+}
+/* 新闻news的制作 */
+.newsflash .news {
+    height: 165px;
+    border: #E6E6E6 solid 1px;
+}
+/* 新闻头部的制作 */
+.news-hd {
+    height: 30px;
+    font-size: 14px;
+    border-bottom: solid 1px #E6E6E6;
+    text-align: center;
+    line-height: 30px;
+}
+.news .news-hd .news-hd-left {
+    float: left;
+    padding-left: 15px;
+}
+.news .news-hd .news-hd-right {
+    float: right;
+    padding-right: 17px;
+}
+/* 新闻主体的制作 */
+.news-bd ul li{
+    /* height: 24px;
+    line-height: 24px; */
+    margin-top: 8px;
+    margin-left: 16px;
+}
+/* 生活服务lifeservice的制作 */
+.newsflash .lifeservice {
+    height: 210px;
+    border: solid #E6E6E6 1px;
+    border-top: none;
+    border-bottom: none;
+    overflow: hidden;
+}
+.lifeservice ul{
+    width: 252px;
+}
+.lifeservice ul li {
+    float: left;
+    width: 63px;
+    height: 70px;
+    border-right: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
+}
+.lifeservice ul li a {
+    display: block;
+    width: 63px;
+    height: 70px;
+    text-align: center;
+}
+.lifeservice ul li a i {
+    display: block;
+    margin-left: 13px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 30px;
+    width: 30px;
+    background: url(../images/icons.png) no-repeat -10px -10px;
+}
+/* 特价商品bargin的制作 */
+.newsflash .bargin {
+    height: 75px;
+    margin-top: 5px;
+}
+/* recommend部分的制作 */
+.recom {
+    height: 162px;
+    margin-top: 20px;
+}
+/* recommend左侧部分的制作 */
+.recom-hd {
+    width: 206px;
+    height: 162px;
+    background-color: #5C5251;
+    text-align: center;
+    line-height: 162px;
+}
+/* recommend右侧部分的制作 */
+.recom-bd {
+    height: 162px;
+}
+.recom-bd ul li {
+    float: left;
+}
+.recom-bd ul li:nth-child(2n+1) {
+    width: 247px;
+    height: 162px;
+}
+.recom-bd ul li:nth-child(2n) {
+    width: 1px;
+    height: 162px;
+    background-color: #ddd;
+}
+/* 楼层区floor的制作 */
+/* 一楼家电层的制作 */
+/* 头部制作 */
+.jiadian .box_hd {
+    height: 30px;
+    margin-top: 30px;
+    border-bottom: 2px solid #C31926;
+    line-height: 30px;
+}
+.jiadian .box_hd .tab_list ul li{
+    float: left;
+}
+.jiadian .box_hd .tab_list ul li a {
+    margin: 0 15px;
+}
+/* 主体制作 */
+.jiadian .box_bd .tab_content {
+    height: 362px;
+}
+.jiadian .box_bd .tab_content .first {
+    width: 190px;
+    text-align: center;
+    background-color: #F9F9F9;
+}
+.jiadian .box_bd .tab_content .first ul li{
+    float: left;
+    width: 80px;
+    height: 30px;
+   line-height: 30px;
+   margin: 0 5px;
+    border-bottom: 1px solid #E6E6E6;
+}
+.jiadian .box_bd .tab_content .second {
+    width: 328px;
+}
+.jiadian .box_bd .tab_content .third {
+    width: 220px;
+}
+.jiadian .box_bd .tab_content .third a {
+    display: block;
+    border-bottom: 1px solid #E6E6E6;
+}
+.jiadian .box_bd .tab_content .fourth {
+    width: 220px;
+    border: 1px solid #E6E6E6;
+    border-top: none;
+}
+.jiadian .box_bd .tab_content .fifth {
+    width: 220px;
+    border: 1px solid #E6E6E6;
+}
+.jiadian .box_bd .tab_content .fifth a {
+    display: block;
+}

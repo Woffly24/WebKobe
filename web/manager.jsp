@@ -1,0 +1,119 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="http://localhost:8080/Kobe/manager/">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后台管理</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.5.2.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            // 给删除的a标签绑定单击事件，用于删除的确认提示操作
+            $("a.deleteClass").click = function () {
+                // 在事件的function函数中，有一个this对象。这个this对象，是当前正在响应事件的dom对象。
+                /**
+                 * confirm是确认提示框函数
+                 * 参数是它的提示内容
+                 * 它有两个按钮，一个确认，一个是取消。
+                 * 返回true表示点击了，确认，返回false表示点击取消。
+                 */
+                return confirm("你确定要删除【" + $(this).parent().parent().find("td:first").text() + "】?");
+                //return false;// 阻止元素的默认行为===不提交请求
+            };
+        });
+    </script>
+    <!-- 引入我们的初始化样式表 -->
+    <link rel="stylesheet" href="../css/base.css">
+    <!-- 引入favicon网站图标 -->
+    <link rel="shortcut icon" href="../favicon.ico">
+    <!-- 引入注册页面独有的样式表 -->
+    <link rel="stylesheet" href="../css/register.css">
+    <style>
+        .reg_form {
+            font-size: 16px;
+        }
+
+        .reg_form table {
+            /*margin-left: 220px;*/
+            text-align: center;
+             /*margin: 0 auto;*/
+            border-spacing: 50px;
+        }
+
+        .reg_form td {
+            width:300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w">
+        <!-- 头部header的制作 start-->
+        <header class="header">
+            <h1>
+                <a href="../index.jsp" class="logo"></a>
+            </h1>
+            <h1 style="line-height: 140px;text-align: center;">您已进入后台商品管理页面！</h1>
+        </header>
+        <!-- 头部header的制作 end-->
+
+        <!-- 注册区域registerarea的制作 start-->
+        <div class="registerarea" style="height: 800px;overflow: scroll">
+            <!-- 头部的制作 -->
+            <div class="registerarea_hd">
+                <h2 style="color: #c81623;position: absolute;margin-left: 465px;">您可以在此页面对商品进行操作</h2>
+            </div>
+            <!-- 主体的制作 -->
+            <div class="reg_form">
+                <table>
+                    <tr>
+                        <td>名称</td>
+                        <td>价格</td>
+                        <td colspan="2">操作</td>
+                    </tr>
+                    <c:forEach items="${requestScope.goods}" var="goods">
+                        <tr>
+                            <td>${goods.name}</td>
+                            <td>${goods.price}</td>
+                            <td><a href="goodsServlet?action=getGoods&id=${goods.id}">修改</a></td>
+                            <td><a class="deleteClass" href="goodsServlet?action=delete&id=${goods.id}">删除</a></td>
+                        </tr>
+                    </c:forEach>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="../book_edit.jsp">添加商品</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-- 注册区域registerarea的制作 end-->
+
+        <!-- footer的制作 -->
+        <!-- mod_copyright的制作 -->
+        <div class="mod_copyright">
+            <div class="links">
+                <a href="#">关于我们</a>|
+                <a href="#">联系我们</a>|
+                <a href="#">联系客服</a>|
+                <a href="#">商家入驻</a>|
+                <a href="#">营销中心</a>|
+                <a href="#">手机Woffly</a>|
+                <a href="#">友情链接</a>|
+                <a href="#">销售联盟</a>
+            </div>
+            <div class="copyright">
+                <p>地址：华南理工大学大学城校区C12计算机科学与工程学院 电话：1008611</p>
+                <p>粤ICP备08001421号粤公网安备110108007702</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

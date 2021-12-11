@@ -1,0 +1,146 @@
+/* 注册页面独有的样式 */
+/* header头部图标的制作 */
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+.header {
+    position: relative;
+    height: 140px;
+    border-bottom: 2px solid #C21916;
+}
+.header h1 a {
+    position: absolute;
+    top: 15px;
+    width: 185px;
+    height: 120px;
+    background: url(../images/logo.png) no-repeat;
+}
+/* 注册页面registerarea头部的制作 */
+.registerarea{
+    margin-top: 20px;
+    height: 524px;
+    border: 2px solid #ccc;
+}
+.registerarea_hd {
+    height: 40px;
+    background-color: #ccc;
+    line-height: 40px;
+}
+.registerarea_hd h2 {
+    float: left;
+    margin-left: 10px;
+    font-size: 18px;
+}
+.registerarea_hd .right {
+    float: right;
+    font-size: 16px;
+}
+.registerarea_hd .right a {
+    color: #C21916;
+    margin-right: 10px;
+}
+/* 注册页面registerarea主体的制作 */
+/* 每一个li的设置 */
+.reg_form ul {
+    margin-top: 50px;
+    margin-left: 150px;
+}
+.reg_form ul li {
+    width: 600px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+/* 前面label的设置 */
+.reg_form label {
+    display: inline-block;
+    width: 110px;
+    text-align: right;
+}
+/* 输入框的制作 */
+.reg_form input {
+    width: 240px;
+    height: 40px;
+    border: 1px solid #ccc;
+}
+/* 错误信息的制作 */
+.reg_form .fail_icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../images/error.png) no-repeat;
+    vertical-align: middle;
+    margin: 0 5px 0 5px;
+}
+.reg_form .error {
+    color: #C21916;
+}
+/* 正确信息的制作 */
+.reg_form .success_icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../images/success.png) no-repeat;
+    vertical-align: middle;
+    margin: 0 5px 0 5px;
+}
+.reg_form .success_icon {
+    color: green;
+}
+/* 安全程度的制作 */
+.reg_form .safe {
+    padding-left: 185px;
+}
+.reg_form .safe i {
+    display: inline-block;
+    width: 35px;
+    height: 18px;
+    margin: 0 1px;
+    text-align: center;
+    line-height: 18px;
+    color:white;
+}
+.reg_form .safe .weak {
+    background-color: red;
+}
+.reg_form .safe .mid {
+    background-color: green;
+}
+.reg_form .safe .strong {
+    background-color: orange;
+}
+/* 同意按钮的制作 */
+.reg_form .agree {
+    padding-left: 100px;
+}
+.reg_form .agree input {
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+}
+.reg_form .agree a {
+    color: blue;
+}
+/* 提交按钮的制作 */
+.reg_form .submit {
+    padding-left: 120px;
+}
+.reg_form .submit .but{
+    width: 200px;
+    height: 35px;
+    background-color: #C21916;
+    color: white;
+}
+/* mod_copyright的制作 */
+.mod_copyright {
+    text-align: center;
+}
+.mod_copyright .links{
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.mod_copyright .links a {
+    padding-left: 20px;
+    padding-right: 20px;
+}
